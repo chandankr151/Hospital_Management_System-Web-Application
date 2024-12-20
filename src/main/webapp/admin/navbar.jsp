@@ -21,6 +21,10 @@
 					aria-current="page" href="doctor.jsp">DOCTOR</a></li>
 
 				<li class="nav-item"><a class="nav-link active"
+					aria-current="page" href="viewDoctor.jsp">VIEW DOCTOR</a></li>
+
+
+				<li class="nav-item"><a class="nav-link active"
 					aria-current="page" href="../patient.jsp">PATIENT</a></li>
 
 				<li class="nav-item"><a class="nav-link active"
@@ -33,7 +37,8 @@
 					<button type="button" class="btn btn-success dropdown-toggle"
 						data-bs-toggle="dropdown" aria-expanded="false">Admin</button>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item bg-danger text-white" href="../adminLogout">Logout</a></li>
+						<li><a class="dropdown-item bg-danger text-white"
+							href="../adminLogout">Logout</a></li>
 
 					</ul>
 				</div>

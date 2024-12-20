@@ -1,3 +1,5 @@
+<%@page import="com.entity.Doctor"%>
+<%@page import="com.dao.DoctorDao"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.entity.Specialist"%>
 <%@page import="java.util.List"%>
@@ -26,7 +28,7 @@
 	<div class="container-fluid p-3">
 		<div class="row">
 
-			<div class="col-md-5 offset-md-4">
+			<div class="col-md-5 offset-md-4 ">
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-3 text-center">Add Doctor</p>
@@ -60,15 +62,15 @@
 									<option>--select--</option>
 
 									<%
-										SpecialistDao dao = new SpecialistDao(DBConnect.getConnection());
-	
-										List<Specialist> list = dao.getAllSpecialist();
-	
-										for (Specialist s : list) {
-										%>
-										<option><%=s.getSpecialistName()%></option>
-										<%
-										}
+									SpecialistDao dao = new SpecialistDao(DBConnect.getConnection());
+
+									List<Specialist> list = dao.getAllSpecialist();
+
+									for (Specialist s : list) {
+									%>
+									<option><%=s.getSpecialistName()%></option>
+									<%
+									}
 									%>
 
 								</select>
@@ -95,8 +97,7 @@
 				</div>
 			</div>
 
-
-
+			
 		</div>
 	</div>
 

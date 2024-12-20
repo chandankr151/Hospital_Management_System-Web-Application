@@ -3,6 +3,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<%@page isELIgnored="false"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,12 +41,12 @@
 <body>
 	<%@include file="component/navbar.jsp"%>
 	<!-- <h1>Welcome to Hospital Management System Projects</h1> -->
-	<%
-		Connection con = DBConnect.getConnection();
-		if(con != null){
-			out.println("database connected successfully");
-		}
-	%>
+	<%-- <%
+	Connection con = DBConnect.getConnection();
+	if (con != null) {
+		System.out.println("database connected successfully");
+	}
+	%> --%>
 	<div id="carouselExampleControls" class="carousel slide"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
