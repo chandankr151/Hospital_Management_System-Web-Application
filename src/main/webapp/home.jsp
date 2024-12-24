@@ -157,94 +157,101 @@
 	</div>
 
 	<!-- =====================OUT TEAM==================== -->
-	<hr>
+	
 	<div class="container p-2">
-		<p class="text-center fs-2 ">Our Team</p>
+    <p class="text-center fs-2">Our Team</p>
 
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc1.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Renu Devi</p>
-						<p class="fs-7">(CEO & Chairman)</p>
-					</div>
-				</div>
-			</div>
+    <div class="row">
+        <!-- Card 1: Dr. Renu Devi -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc1.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Renu Devi</p>
+                    <p class="fs-7">(CEO & Chairman)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc2.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Shivnath DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 2: Dr. Shivnath DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc2.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Shivnath DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc3.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Malti DEVI</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 3: Dr. Malti DEVI -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc3.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Malti DEVI</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc4.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Shatrudhan DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc5.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Chandan DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 4: Dr. Shatrudhan DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc4.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Shatrudhan DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc6.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Mithun DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 5: Dr. Chandan DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc5.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Chandan DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc1.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Samrat DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 6: Dr. Mithun DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc6.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Mithun DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-md-3">
-				<div class="card paint-card">
-					<div class="card-body text-center">
-						<img src="images/doc2.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Ayush DAS</p>
-						<p class="fs-7">(Chief Doctor)</p>
-					</div>
-				</div>
-			</div>
+        <!-- Card 7: Dr. Samrat DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc1.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Samrat DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
 
-		</div>
-
-	</div>
+        <!-- Card 8: Dr. Ayush DAS -->
+        <div class="col-md-3 mb-4">
+            <div class="card paint-card">
+                <div class="card-body text-center">
+                    <img src="images/doc2.jpg" width="250px" height="300px">
+                    <p class="fw-bold fs-5">Dr. Ayush DAS</p>
+                    <p class="fs-7">(Chief Doctor)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
 
 	<%@include file="component/footer.jsp"%>
 </body>

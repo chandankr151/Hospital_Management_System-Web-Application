@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>doctor page</title>
 
@@ -24,23 +25,35 @@
 
 </head>
 <body>
+
 	<%@include file="navbar.jsp"%>
+
 	<div class="container-fluid p-3">
+
 		<div class="row">
 
 			<div class="col-md-5 offset-md-4 ">
 				<div class="card paint-card">
 					<div class="card-body">
+
 						<p class="fs-3 text-center">Add Doctor</p>
+
 						<c:if test="${not empty errorMsg}">
+
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
+
 						</c:if>
+
 						<c:if test="${not empty succMsg}">
+
 							<div class="fs-3 text-center text-success" role="alert">${succMsg}</div>
 							<c:remove var="succMsg" scope="session" />
+
 						</c:if>
+
 						<form action="../addDoctor" method="post">
+
 							<div class="mb-3">
 								<label class="form-label">Full Name</label> <input type="text"
 									required name="fullname" class="form-control">
@@ -52,10 +65,13 @@
 							</div>
 
 							<div class="mb-3">
+
 								<label class="form-label">Qualification</label> <input required
 									name="qualification" type="text" class="form-control">
 							</div>
+
 							<div class="mb-3">
+
 								<label class="form-label">Specialist</label> <select name="spec"
 									required class="form-control">
 
@@ -97,7 +113,6 @@
 				</div>
 			</div>
 
-			
 		</div>
 	</div>
 

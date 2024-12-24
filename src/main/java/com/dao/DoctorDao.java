@@ -18,13 +18,18 @@ public class DoctorDao {
 		this.con = con;
 	}
 
+	//// ====================================================
+
 	public boolean registerDoctor(Doctor d) {
 
 		boolean flag = false;
 
 		try {
+
 			String query = "insert into doctor(doc_fullName, doc_dob, doc_qualification, doc_specialist, doc_email, doc_mobno, doc_pass) values(?,?,?,?,?,?,?)";
+
 			PreparedStatement ptmt = con.prepareStatement(query);
+
 			ptmt.setString(1, d.getFullName());
 			ptmt.setString(2, d.getDob());
 			ptmt.setString(3, d.getQualification());
@@ -34,6 +39,7 @@ public class DoctorDao {
 			ptmt.setString(7, d.getPassword());
 
 			int i = ptmt.executeUpdate();
+
 			if (i == 1) {
 				flag = true;
 			} else {
@@ -42,11 +48,15 @@ public class DoctorDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		return flag;
 	}
 
+	///// ========================================================
+
 	public List<Doctor> getAllDoctor() {
-		List<Doctor> list = new ArrayList<Doctor>();
+
+		List<Doctor> list = new ArrayList<>();
 		Doctor d = null;
 
 		try {
@@ -55,8 +65,11 @@ public class DoctorDao {
 			PreparedStatement ptmt = con.prepareStatement(query);
 
 			ResultSet rs = ptmt.executeQuery();
+
 			while (rs.next()) {
+
 				d = new Doctor();
+
 				d.setId(rs.getInt(1));
 				d.setFullName(rs.getString(2));
 				d.setDob(rs.getString(3));
@@ -68,6 +81,7 @@ public class DoctorDao {
 
 				list.add(d);
 			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -80,11 +94,14 @@ public class DoctorDao {
 		Doctor d = new Doctor();
 
 		String query = "select * from doctor where doc_id = ? ";
+
 		try {
+
 			PreparedStatement ptmt = con.prepareStatement(query);
 			ptmt.setInt(1, doc_id);
 
 			ResultSet rs = ptmt.executeQuery();
+
 			while (rs.next()) {
 
 				d.setId(rs.getInt(1));
@@ -111,8 +128,11 @@ public class DoctorDao {
 		boolean flag = false;
 
 		try {
+
 			String query = "update doctor set doc_fullName=?, doc_dob =?, doc_qualification=?, doc_specialist=?, doc_email=?, doc_mobno=?, doc_pass=? where doc_id=?";
+
 			PreparedStatement ptmt = con.prepareStatement(query);
+
 			ptmt.setString(1, d.getFullName());
 			ptmt.setString(2, d.getDob());
 			ptmt.setString(3, d.getQualification());
@@ -123,14 +143,17 @@ public class DoctorDao {
 			ptmt.setInt(8, d.getId());
 
 			int i = ptmt.executeUpdate();
+
 			if (i == 1) {
 				flag = true;
 			} else {
 
 			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		return flag;
 	}
 
@@ -142,12 +165,15 @@ public class DoctorDao {
 		PreparedStatement ptmt;
 
 		try {
+
 			ptmt = con.prepareStatement(query);
 			ptmt.setInt(1, id);
 
 			int f = ptmt.executeUpdate();
-			if (f == 1)
+
+			if (f == 1) {
 				flag = true;
+			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -161,14 +187,16 @@ public class DoctorDao {
 		Doctor d = null;
 
 		String query = "select * from doctor where doc_email=? and doc_pass=?";
+
 		try {
-			
+
 			PreparedStatement ptmt = con.prepareStatement(query);
-			
+
 			ptmt.setString(1, email);
 			ptmt.setString(2, pass);
 
 			ResultSet rs = ptmt.executeQuery();
+
 			while (rs.next()) {
 
 				d = new Doctor();
@@ -188,5 +216,207 @@ public class DoctorDao {
 		}
 
 		return d;
+	}
+
+	/// =====================================
+	public int doctorCount() {
+
+		int i = 0;
+
+		try {
+
+			String query = " select count(*) from doctor ";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ResultSet rs = ptmt.executeQuery();
+			while (rs.next()) {
+				i = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	/// ==========CountDoctor based on id===========
+
+	public int AppointmentCountByDoctorId(int id) {
+
+		int i = 0;
+
+		try {
+
+			String query = " select count(*) from appointment where doctorid = ? ";
+			PreparedStatement ptmt = con.prepareStatement(query);
+			ptmt.setInt(1, id);
+
+			ResultSet rs = ptmt.executeQuery();
+
+			while (rs.next()) {
+				i = rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	//// ======Appointment Count===========
+	public int AppointmentCount() {
+
+		int i = 0;
+
+		try {
+
+			String query = " select count(*) from appointment ";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ResultSet rs = ptmt.executeQuery();
+			while (rs.next()) {
+				i = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	//// ======User Count============
+
+	public int userCount() {
+
+		int i = 0;
+
+		try {
+
+			String query = " select count(*) from user ";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ResultSet rs = ptmt.executeQuery();
+
+			while (rs.next()) {
+				i = rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return i;
+	}
+
+	//// =============Count Specialist=============
+
+	public int specialistCount() {
+
+		int i = 0;
+
+		try {
+
+			String query = " select count(*) from specialist ";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ResultSet rs = ptmt.executeQuery();
+
+			while (rs.next()) {
+				i = rs.getInt(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return i;
+	}
+
+	/// ==================Check Old Password============
+
+	public int checkOldPassword(int userId, String oldPass) {
+
+		int x = 0;
+
+		try {
+
+			String query = "select * from doctor where doc_pass=? and  doc_id=?";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ptmt.setString(1, oldPass);
+			ptmt.setInt(2, userId);
+
+			ResultSet i = ptmt.executeQuery();
+
+			while (i.next()) {
+				x++;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return x;
+	}
+
+	/// ====================Change New Password=========================
+
+	public boolean changeUserPassword(int userId, String newPass) {
+
+		boolean flag = false;
+
+		try {
+
+			String query = " update doctor set doc_pass = ? where doc_id=?";
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ptmt.setString(1, newPass);
+			ptmt.setInt(2, userId);
+
+			int i = ptmt.executeUpdate();
+
+			if (i == 1) {
+
+				flag = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return flag;
+	}
+
+	//// ========================================
+
+	public boolean editDoctorProfile(Doctor d) {
+
+		boolean flag = false;
+
+		try {
+
+			String query = "update doctor set doc_fullName=?, doc_dob =?, doc_qualification=?, doc_specialist=?, doc_email=?, doc_mobno=? where doc_id=?";
+
+			PreparedStatement ptmt = con.prepareStatement(query);
+
+			ptmt.setString(1, d.getFullName());
+			ptmt.setString(2, d.getDob());
+			ptmt.setString(3, d.getQualification());
+			ptmt.setString(4, d.getSpecialist());
+			ptmt.setString(5, d.getEmail());
+			ptmt.setString(6, d.getMobNo());
+			ptmt.setInt(7, d.getId());
+
+			int i = ptmt.executeUpdate();
+
+			if (i == 1) {
+				flag = true;
+			} else {
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return flag;
 	}
 }

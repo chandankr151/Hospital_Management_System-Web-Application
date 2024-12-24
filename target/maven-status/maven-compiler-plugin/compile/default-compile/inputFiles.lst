@@ -11,11 +11,15 @@ E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\dao\
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\db\DBConnect.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\doctor\servlet\DoctorLogin.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\doctor\servlet\DoctorLogout.java
+E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\doctor\servlet\DoctorPasswordChange.java
+E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\doctor\servlet\Edit_DoctorProfile.java
+E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\doctor\servlet\UpdateStatus.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\entity\Appointment.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\entity\AppointmentServlet.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\entity\Doctor.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\entity\Specialist.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\entity\User.java
+E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\user\servlet\changePassword.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\user\servlet\UserLogin.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\user\servlet\UserLogout.java
 E:\Servlet_Jsp_Durgesh_Dec2024\Hospital_Management_System\src\main\java\com\user\servlet\UserRegister.java

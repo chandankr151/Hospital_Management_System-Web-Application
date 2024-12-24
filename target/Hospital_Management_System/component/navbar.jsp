@@ -37,7 +37,8 @@
 						aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
 
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="view_appointment.jsp">VIEW APPOINTMENT</a></li>
+						aria-current="page" href="view_appointment.jsp">VIEW
+							APPOINTMENT</a></li>
 
 					<div class="dropdown">
 						<button class="btn btn-success dropdown-toggle" type="button"
@@ -45,7 +46,8 @@
 							aria-expanded="false">
 							<i class="fa-regular fa-user"></i>${userObj.fullName }</button>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-							<li><a class="dropdown-item" href="#">Changed Password</a></li>
+							<li><a class="dropdown-item" href="change_password.jsp">Changed
+									Password</a></li>
 							<li><a class="dropdown-item" href="userLogout">Logout</a></li>
 
 						</ul>

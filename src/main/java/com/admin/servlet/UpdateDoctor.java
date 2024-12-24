@@ -22,6 +22,7 @@ public class UpdateDoctor extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		int id = Integer.parseInt(req.getParameter("id"));
+
 		String dob = req.getParameter("dob");
 		String qual = req.getParameter("qualification");
 		String spec = req.getParameter("spec");
@@ -32,16 +33,21 @@ public class UpdateDoctor extends HttpServlet {
 
 		Doctor dd = new Doctor(id, fullName, dob, qual, spec, email, mobNo, pass);
 		DoctorDao dao = new DoctorDao(DBConnect.getConnection());
+
 		HttpSession session = req.getSession();
 
 		boolean docupdate = dao.updateDoctor(dd);
+
 		if (docupdate) {
+
 			session.setAttribute("succMsg", "doctor updated successfully");
 			resp.sendRedirect("admin/viewDoctor.jsp");
+
 		} else {
 
 			session.setAttribute("errorMsg", "something went wrong on server");
 			resp.sendRedirect("admin/viewDoctor.jsp");
+
 		}
 	}
 

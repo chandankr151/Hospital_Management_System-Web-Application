@@ -14,7 +14,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="../home.jsp"><i
+					aria-current="page" href="index.jsp"><i
 						class="fa-solid fa-right-to-bracket"></i>Home</a></li>
 
 				<li class="nav-item"><a class="nav-link active"
@@ -25,13 +25,13 @@
 
 
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="../patient.jsp">PATIENT</a></li>
+					aria-current="page" href="patient.jsp">PATIENT</a></li>
 
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="../login.jsp">USER</a></li>
+					aria-current="page" href="../user_login.jsp">USER</a></li>
 
 			</ul>
-			<form class="d-flex">
+			<form class="d-flex" action="">
 				<!-- Example single danger button -->
 				<div class="btn-group">
 					<button type="button" class="btn btn-success dropdown-toggle"

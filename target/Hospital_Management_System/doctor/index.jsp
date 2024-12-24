@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@page import="com.db.DBConnect"%>
 <%@page import="com.dao.DoctorDao"%>
 <%@page import="com.entity.Doctor"%>
@@ -34,8 +33,10 @@
 	<p class="text-center fs-3">Doctor Dashboard</p>
 
 	<%
-	Doctor d = (Doctor) session.getAttribute("doctObj");
+	Doctor d = (Doctor) session.getAttribute("doctorObj");
 	DoctorDao dao = new DoctorDao(DBConnect.getConnection());
+
+	int docCount = dao.doctorCount();
 	%>
 	<div class="container p-5">
 		<div class="row ">
@@ -44,7 +45,7 @@
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Doctor <br><%=11%>
+							Doctor <br><%=docCount%>
 						</p>
 					</div>
 				</div>
@@ -55,7 +56,7 @@
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
 							Total Appointment <br>
-							<%=233%>
+							<%=dao.AppointmentCountByDoctorId(d.getId())%>
 						</p>
 					</div>
 				</div>

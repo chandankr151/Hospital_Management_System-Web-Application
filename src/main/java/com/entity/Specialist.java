@@ -10,6 +10,7 @@ public class Specialist {
 	}
 
 	public Specialist(int id, String specialistName) {
+		
 		super();
 		this.id = id;
 		this.specialistName = specialistName;
@@ -29,11 +30,6 @@ public class Specialist {
 
 	public void setSpecialistName(String specialistName) {
 		this.specialistName = specialistName;
-	}
-
-	@Override
-	public String toString() {
-		return "Specialist [id=" + id + ", specialistName=" + specialistName + "]";
 	}
 
 }

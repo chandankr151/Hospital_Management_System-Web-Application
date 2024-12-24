@@ -20,10 +20,16 @@
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
-	<div class="col-md-12">
+	<div class="col-md-11 p-5">
 		<div class="card paint-card">
 			<div class="card-body">
 				<p class="fs-3 text-center">Patient Details</p>
+				<c:if test="${not empty succMsg }">
+				
+					<p class="text-center fs-3 text-success"> ${succMsg }</p>
+					<c:remove var="succMsg"/>
+				</c:if>
+				
 				<table class="table">
 					<thead>
 						<tr>
@@ -62,7 +68,7 @@
 							<td><%=ap.getStatus()%></td>
 							
 							<td>
-								<a href="#" class="btn btn-success btn-sm">Comment</a>
+								<a href="comment.jsp?id=<%=ap.getId() %>" class="btn btn-success btn-sm">Comment</a>
 							</td>
 						</tr>
 						<%

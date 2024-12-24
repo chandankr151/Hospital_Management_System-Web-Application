@@ -1,3 +1,5 @@
+<%@page import="com.db.DBConnect"%>
+<%@page import="com.dao.DoctorDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -33,6 +35,14 @@
 			<c:remove var="succMsg" scope="session" />
 		</c:if>
 
+		<%
+		DoctorDao docDao = new DoctorDao(DBConnect.getConnection());
+		int docCount = docDao.doctorCount();
+		int appCount = docDao.AppointmentCount();
+		int specCount = docDao.specialistCount();
+		int userCount = docDao.userCount();
+		%>
+
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card paint-card">
@@ -40,7 +50,7 @@
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">Doctor</p>
 						<p class="fs-4 text-center text-dark">
-							<b><%=110%></b>
+							<b><%=docCount%></b>
 						</p>
 
 					</div>
@@ -53,7 +63,7 @@
 						<i class="fas fa-user-circle fa-3x"></i><br>
 						<p class="fs-4 text-center">User</p>
 						<p class="fs-4 text-center text-dark">
-							<b><%=1150%></b>
+							<b><%=userCount%></b>
 						</p>
 
 					</div>
@@ -66,7 +76,7 @@
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">Total Appointment</p>
 						<p class="fs-4 text-center text-dark">
-							<b><%=21300%></b>
+							<b><%=appCount%></b>
 						</p>
 
 					</div>
@@ -81,7 +91,7 @@
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">Specialist</p>
 						<p class="fs-4 text-center text-dark">
-							<b><%=1000%></b>
+							<b><%=specCount%></b>
 						</p>
 
 					</div>
@@ -99,7 +109,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h3 class="modal-title" id="exampleModalLabel">Add Specialist</h3>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
@@ -111,7 +121,7 @@
 								name="specName" class="form-control">
 						</div>
 						<div class="text-center mt-3">
-							<button type="submit" class="btn btn-primary">Add</button>
+							<button type="submit" class="btn btn-primary col-md-5">Add</button>
 						</div>
 					</form>
 				</div>

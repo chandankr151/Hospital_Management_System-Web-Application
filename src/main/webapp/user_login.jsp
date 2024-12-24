@@ -21,14 +21,19 @@
 <body>
 
 	<%@include file="component/navbar.jsp"%>
-
+	
+	<c:if test="${not empty adminObj }">
+		<c:redirect url="admin/index.jsp"></c:redirect>
+	</c:if>
+	
+	
 	<div class="container p-5">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-4 text-center">User Login</p>
-
+	
 						<c:if test="${not empty succMsg }">
 							<p class="text-center text-success fs-3">${succMsg}</p>
 							<c:remove var="succMsg" scope="session" />

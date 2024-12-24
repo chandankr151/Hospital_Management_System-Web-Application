@@ -25,14 +25,20 @@ public class UserLogin extends HttpServlet {
 		String pass = req.getParameter("password");
 
 		HttpSession session = req.getSession();
+
 		UserDao dao = new UserDao(DBConnect.getConnection());
 		User user = dao.login(email, pass);
+
 		if (user != null) {
+
 			session.setAttribute("userObj", user);
 			resp.sendRedirect("home.jsp");
+
 		} else {
+
 			session.setAttribute("errorMsg", "Invalid email & password");
 			resp.sendRedirect("user_login.jsp");
+
 		}
 	}
 }
